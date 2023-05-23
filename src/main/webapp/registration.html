@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+         var p=f.pwd.value;
+         
+         console.log(p)
+         var i=p.length;
+         var a=f.email.value;
+         
+         var mail=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+         if(i<6)
+         alert("password must be six charecters");
+         if(!a.match(mail))
+          alert("Email is not valid");
+        }
+        </script>
+        <style>
+            fieldset{
+    width:600px;
+    height:900px;
+    margin:auto;
+    background-color: rgb(204, 170, 170);
+    padding-left: 60px;
+ }
+ div{
+    display:flex;
+    margin:25px 5px 5px 25px;
+     gap: 20px;
+ }
+ 
+ input,textarea,option{
+     margin:5px 10px;
+ }
+ 
+ body{
+     background-color: rgba(150, 180, 124, 0.623);
+     font-size:18px;
+     font-family: 'Mohave', sans-serif;
+ }
+ #proof,#checkbox{
+     margin-right:-30px;
+ }
+ button{
+     display: block;
+     margin:auto;
+     background-color: rgb(20, 20, 20);
+     color:white;
+     margin-top:30px;
+     font-size: large;
+ }
+ h2{
+     text-align:center;
+ }
+
+ fieldset{
+     border-radius: 30px;
+ }
+ legend{
+     margin-left:30px ;
+ }
+ .fname1{
+  margin-left: 15px;
+ }
+
+ input{
+     border-radius: 5px;
+ }
+ .n2{
+     margin-left: 15px;
+ }
+ .n3{
+    margin-left: 23px;
+}
+ .n4{
+    margin-left: 50px;
+}
+.sel{
+    margin-left: 50px;
+}
+        </style>
+        
+</head>
+
+    <body>
+        <h2>User registration form</h2>
+        <form method='post' action='registration.jsp'>
+		<label for="UserName">UserName</label>
+		<input type='text' name="UserName"><br>
+		<label for="email">Email</label>
+		<input type='email' name="Email"><br>
+		<label for="password">NewPassword</label>
+		<input type='password' name="password"><br>
+		<label for="Cpw">ConfirmNewPassword</label>
+		<input type='password' name="Cpw"><br>
+		<label for="Number">PhoneNumber</label>
+		<input type='number' name="Number"><br>
+		<input type="submit" value="Submit"/>  
+		
+	</form>
+    
+</html>
